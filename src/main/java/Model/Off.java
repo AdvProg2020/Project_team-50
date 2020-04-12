@@ -1,17 +1,18 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Off {
     private String offId;
     private ArrayList<Product> allProducts = new ArrayList<Product>();
     //state
-    private String startTime;
-    private String endTime;
+    private Date startTime;
+    private Date endTime;
     private double offAmount;
     private Seller seller;
 
-    public Off(String offId, String startTime, String endTime, double offAmount, Seller seller) {
+    public Off(String offId, Date startTime, Date endTime, double offAmount, Seller seller) {
         this.offId = offId;
         this.startTime = startTime;
         this.endTime = endTime;
