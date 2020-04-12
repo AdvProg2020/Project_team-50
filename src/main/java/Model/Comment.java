@@ -7,8 +7,10 @@ public class Comment {
     //status
     private boolean didCommenterBuyTheProduct;
 
-    public Comment(Product product, String commentText) {
+    public Comment(Person person, Product product, String commentText, boolean didCommenterBuyTheProduct) {
+        this.person = person;
         this.product = product;
         this.commentText = commentText;
+        this.didCommenterBuyTheProduct = didCommenterBuyTheProduct;
     }
 }
