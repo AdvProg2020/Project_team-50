@@ -3,7 +3,6 @@ package Model;
 import java.util.ArrayList;
 
 public class Off {
-
     private String offId;
     private ArrayList<Product> allProducts = new ArrayList<Product>();
     //state

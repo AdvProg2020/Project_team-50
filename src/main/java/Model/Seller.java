@@ -3,7 +3,6 @@ package Model;
 import java.util.ArrayList;
 
 public class Seller extends Person {
-
     private String factoryName;
     public ArrayList<Product> allProducts = new ArrayList<Product>();
     public ArrayList<Off> allOffers = new ArrayList<Off>();

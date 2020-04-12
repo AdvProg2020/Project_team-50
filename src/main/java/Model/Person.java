@@ -3,7 +3,6 @@ package Model;
 import java.util.ArrayList;
 
 public class Person {
-
     protected final String userName;
     protected String firstName;
     protected String lastName;

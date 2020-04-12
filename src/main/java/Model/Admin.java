@@ -3,7 +3,6 @@ package Model;
 import java.util.ArrayList;
 
 public class Admin extends Person {
-
     private ArrayList<Person> allPerson = new ArrayList<Person>();
     private ArrayList<Category> allCategories = new ArrayList<Category>();
     private ArrayList<Off> allOff = new ArrayList<Off>();
