@@ -31,4 +31,49 @@ public class Product {
         products = new ArrayList<Product>();
         products.add(this);
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setComments(ArrayList<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public ArrayList<Comment> getComments() {
+        return comments;
+    }
+
+
+    public void setFactoryName(String factoryName) {
+        this.factoryName = factoryName;
+    }
+
+    public String getFactoryName() {
+        return factoryName;
+    }
+
+    public static void getProductById(String productId){
+        //TODO
+    }
+
+    public static boolean hasProductWithId(String productId){
+        //TODO
+    }
+
+    public void deleteProduct(Product product){
+        //TODO
+    }
 }
