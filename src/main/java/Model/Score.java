@@ -10,4 +10,12 @@ public class Score {
         this.product = product;
         this.rating = rating;
     }
+
+    public static boolean canShopperRateThisProduct(Shopper shopper){
+        //TODO
+    }
+
+    public static double calculateAverageScore(Product product){
+        //TODO
+    }
 }
