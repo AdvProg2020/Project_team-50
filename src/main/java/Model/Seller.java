@@ -13,4 +13,45 @@ public class Seller extends Person {
         this.factoryName = factoryName;
         allPerson.add(this);
     }
+
+    public String getFactoryName() {
+        return factoryName;
+    }
+
+    public void showPersonalAccountInfo(){
+        //TODO
+    }
+
+    public void changePersonalInfo(){
+        //TODO
+    }
+
+    public void showFactoryInfo(){
+        //TODO
+    }
+
+    public void showSalesProducts(){
+        //TODO
+    }
+
+    public void addProduct(){
+        //TODO
+    }
+
+    public void editProduct(String productId){
+        //TODO
+    }
+
+    public void deleteProduct(){
+        //TODO
+    }
+
+    public void addNewOff(){
+        //TODO
+    }
+
+    public void editOff(String offId){
+        //TODO
+    }
+
 }
