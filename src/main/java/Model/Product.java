@@ -15,6 +15,7 @@ public class Product {
     private String description;
     private ArrayList<Score> scores;
     private ArrayList<Comment> comments;
+    private ArrayList<Product> products;
 
     public Product(String productId, String name, String factoryName, int price, Seller sellers, boolean isExisting, Category category, String description) {
         this.productId = productId;
@@ -27,5 +28,7 @@ public class Product {
         this.description = description;
         scores = new ArrayList<Score>();
         comments = new ArrayList<Comment>();
+        products = new ArrayList<Product>();
+        products.add(this);
     }
 }

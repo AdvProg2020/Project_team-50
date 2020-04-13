@@ -9,7 +9,6 @@ public class Person {
     protected String eMail;
     protected String phoneNumber;
     protected String password;
-    protected double credit;
     public ArrayList<Person> allPerson = new ArrayList<Person>();
     public ArrayList<CodedDiscount> codedDiscounts = new ArrayList<CodedDiscount>();
     public ArrayList<BuyLog> buyLogs = new ArrayList<BuyLog>();
@@ -77,14 +76,6 @@ public class Person {
         return password;
     }
 
-    public void setCredit(double credit) {
-        this.credit = credit;
-    }
-
-    public double getCredit() {
-        return credit;
-    }
-
     @Override
     public String toString() {
         return "Person{" +
@@ -94,7 +85,6 @@ public class Person {
                 ", eMail='" + eMail + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", password='" + password + '\'' +
-                ", credit=" + credit +
                 '}';
     }
 }
