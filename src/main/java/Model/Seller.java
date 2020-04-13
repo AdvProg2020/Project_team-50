@@ -14,6 +14,10 @@ public class Seller extends Person {
         allPerson.add(this);
     }
 
+    public void setFactoryName(String factoryName) {
+        this.factoryName = factoryName;
+    }
+
     public String getFactoryName() {
         return factoryName;
     }
