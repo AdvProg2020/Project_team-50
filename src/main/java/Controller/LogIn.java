@@ -1,7 +1,7 @@
 package Controller;
 
 public class LogIn {
-    public void enterUsernameAndPassword() {
+    public static void enterUsernameAndPassword() {
 
     }
 }
