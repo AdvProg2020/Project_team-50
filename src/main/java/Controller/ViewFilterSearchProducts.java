@@ -14,6 +14,9 @@ public class ViewFilterSearchProducts {
     public void search() {
     }
 
+    public void nextPages() {
+    }
+
     public void filterRemoval() {
     }
 }
