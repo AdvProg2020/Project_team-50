@@ -24,4 +24,77 @@ public class Person {
         this.password = password;
         allPerson.add(this);
     }
+
+    public static Person getPersonByUserName(String userName){
+        //TODO
+    }
+
+    public boolean isTherePersonWithUserName(String userName){
+        //TODO
+    }
+
+    public static void deleteAccount(Person person){
+        //TODO
+    }
+
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void seteMail(String eMail) {
+        this.eMail = eMail;
+    }
+
+    public String geteMail() {
+        return eMail;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setCredit(double credit) {
+        this.credit = credit;
+    }
+
+    public double getCredit() {
+        return credit;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "userName='" + userName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", eMail='" + eMail + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", password='" + password + '\'' +
+                ", credit=" + credit +
+                '}';
+    }
 }
