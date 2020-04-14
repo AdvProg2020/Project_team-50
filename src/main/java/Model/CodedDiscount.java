@@ -14,15 +14,63 @@ public class CodedDiscount {
     private HashMap<Person, Integer> usageCount = new HashMap<Person, Integer>();
     public ArrayList<CodedDiscount> codedDiscounts = new ArrayList<CodedDiscount>();
 
-    public CodedDiscount(String discountId, Date startTime, Date endTime, double discountRate, double maxDiscountRate, ArrayList<Person> allPerson) {
+    public CodedDiscount(String discountId, Date startTime, Date endTime, double discountRate, double maxDiscountRate) {
         this.discountId = discountId;
         this.startTime = startTime;
         this.endTime = endTime;
         this.discountRate = discountRate;
         this.maxDiscountRate = maxDiscountRate;
-        codedDiscounts.add(this);
-        for (Person person: allPerson) {
-            usageCount.put(person, 0);
-        }
+    }
+
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
+    }
+
+    public Date getStartTime() {
+        return startTime;
+    }
+
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public void setDiscountRate(double discountRate) {
+        this.discountRate = discountRate;
+    }
+
+    public double getDiscountRate() {
+        return discountRate;
+    }
+
+    public void setMaxDiscountRate(double maxDiscountRate) {
+        this.maxDiscountRate = maxDiscountRate;
+    }
+
+    public double getMaxDiscountRate() {
+        return maxDiscountRate;
+    }
+
+    public static CodedDiscount getCodedDiscountById(String discountId){
+        //TODO
+    }
+
+    public void addCodedDiscount(){
+        //TODO
+    }
+
+    public void deleteCodedDiscount(CodedDiscount codedDiscount){
+        //TODO
+    }
+
+    public void setUsageCount(HashMap<Person, Integer> usageCount) {
+        this.usageCount = usageCount;
+    }
+
+    public static boolean canShopperUseCodedDiscount(Shopper shopper){
+        //TODO
     }
 }
