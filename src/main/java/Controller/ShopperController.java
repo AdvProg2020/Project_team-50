@@ -3,6 +3,8 @@ package Controller;
 import Model.Product;
 import Model.Shopper;
 
+import java.util.ArrayList;
+
 public class ShopperController {
     public static void changePersonalInfo(Shopper shopper, String field, String newInfo){
         //TODO
