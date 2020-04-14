@@ -1,6 +1,6 @@
 package Controller;
 
-public class createNewCategory {
+public class CreateNewCategory {
     public void addCategory(String name, String feature) {
     }
 }
