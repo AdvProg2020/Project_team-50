@@ -1,6 +1,6 @@
 package Controller;
 
 public class Comparison {
-    public void comparisonInCategory() {
+    public void comparisonInCategory(String product) {
     }
 }
