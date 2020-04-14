@@ -6,7 +6,7 @@ public class Comment {
     private Shopper shopper;
     private Product product;
     private String commentText;
-    //status
+    private CommentCondition commentCondition;
     private boolean didShopperBuyTheProduct;
     private ArrayList<Comment> allComment = new ArrayList<Comment>();
 
@@ -24,6 +24,14 @@ public class Comment {
 
     public String getCommentText() {
         return commentText;
+    }
+
+    public void setCommentCondition(CommentCondition commentCondition) {
+        this.commentCondition = commentCondition;
+    }
+
+    public CommentCondition getCommentCondition() {
+        return commentCondition;
     }
 
     public boolean didShopperBuyTheProduct(Shopper shopper){

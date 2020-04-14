@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Request {
     private String requestId;
     private Seller seller;
-    //status
+    private RequstType requstType;
     private ArrayList<Request> allRequests = new ArrayList<Request>();;
 
     public Request(String requestId, Seller seller) {
@@ -25,5 +25,13 @@ public class Request {
 
     public static void deleteRequestById(Request request){
         //TODO
+    }
+
+    public void setRequstType(RequstType requstType) {
+        this.requstType = requstType;
+    }
+
+    public RequstType getRequstType() {
+        return requstType;
     }
 }

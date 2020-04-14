@@ -6,7 +6,7 @@ import java.util.Date;
 public class Off {
     private String offId;
     private ArrayList<Product> allProducts = new ArrayList<Product>();
-    //state
+    private OffCondition offCondition;
     private Date startTime;
     private Date endTime;
     private double offAmount;
@@ -26,7 +26,13 @@ public class Off {
         return offId;
     }
 
-    //TODO Set & get Status
+    public void setOffCondition(OffCondition offCondition) {
+        this.offCondition = offCondition;
+    }
+
+    public OffCondition getOffCondition() {
+        return offCondition;
+    }
 
     public void setStartTime(Date startTime) {
         this.startTime = startTime;

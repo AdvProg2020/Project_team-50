@@ -9,7 +9,7 @@ public class BuyLog {
     private double payment;
     private double discountAmount;
     private Seller seller;
-    //status
+    private DeliveryStatus deliveryStatus;
     private ArrayList<Product> products;
     private ArrayList<BuyLog> buyLogs = new ArrayList<BuyLog>();
 
@@ -56,6 +56,14 @@ public class BuyLog {
 
     public Seller getSeller() {
         return seller;
+    }
+
+    public void setDeliveryStatus(DeliveryStatus deliveryStatus) {
+        this.deliveryStatus = deliveryStatus;
+    }
+
+    public DeliveryStatus getDeliveryStatus() {
+        return deliveryStatus;
     }
 
     public void setBuyLogs(ArrayList<BuyLog> buyLogs) {

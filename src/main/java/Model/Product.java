@@ -2,9 +2,11 @@ package Model;
 
 import java.util.ArrayList;
 
+
+
 public class Product {
     private String productId;
-    //status
+    private ProductCondition productCondition;
     private String name;
     private String factoryName;
     private int price;
@@ -38,6 +40,14 @@ public class Product {
 
     public String getName() {
         return name;
+    }
+
+    public void setProductCondition(ProductCondition productCondition) {
+        this.productCondition = productCondition;
+    }
+
+    public ProductCondition getProductCondition() {
+        return productCondition;
     }
 
     public void setPrice(int price) {
