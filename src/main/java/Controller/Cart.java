@@ -1,6 +1,9 @@
 package Controller;
 
 public class Cart {
+    public void viewCart() {
+    }
+
     public void viewShipping() {
     }
 
