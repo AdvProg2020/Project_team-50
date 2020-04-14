@@ -11,6 +11,7 @@ public class SellLog {
     private Shopper shopper;
     //status
     private ArrayList<Product> products;
+    private ArrayList<SellLog> sellLogs = new ArrayList<SellLog>();
 
     public SellLog(String logId, Date date, double payment, Shopper shopper, ArrayList<Product> products) {
         this.logId = logId;
@@ -18,6 +19,7 @@ public class SellLog {
         this.payment = payment;
         this.shopper = shopper;
         this.products = products;
+        sellLogs.add(this);
     }
 
     public void setLogId(String logId) {
@@ -56,9 +58,7 @@ public class SellLog {
         return shopper;
     }
 
-    public void getShopperLogs(Shopper shopper){
+    public ArrayList<SellLog> getShopperLogs(Shopper shopper) {
         //TODO
     }
-
-
 }
