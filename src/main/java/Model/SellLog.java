@@ -19,4 +19,46 @@ public class SellLog {
         this.shopper = shopper;
         this.products = products;
     }
+
+    public void setLogId(String logId) {
+        this.logId = logId;
+    }
+
+    public String getLogId() {
+        return logId;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setPayment(double payment) {
+        this.payment = payment;
+    }
+
+    public double getPayment() {
+        return payment;
+    }
+
+    public void setOffAmount(double offAmount) {
+        this.offAmount = offAmount;
+    }
+
+    public double getOffAmount() {
+        return offAmount;
+    }
+
+    public Shopper getShopper() {
+        return shopper;
+    }
+
+    public void getShopperLogs(Shopper shopper){
+        //TODO
+    }
+
+
 }
