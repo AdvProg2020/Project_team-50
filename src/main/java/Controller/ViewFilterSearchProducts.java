@@ -2,21 +2,18 @@ package Controller;
 
 public class ViewFilterSearchProducts {
 
-    public void ProductPage() {
+    public void viewProductPage(String productPage) {
     }
 
-    public void selectCategory() {
+    public void selectCategory(String category) {
     }
 
-    public void enterFilters() {
+    public void enterFilters(String filter) {
     }
 
     public void search() {
     }
 
-    public void nextPages() {
-    }
-
-    public void filterRemoval() {
+    public void nextPages(int Page) {
     }
 }
