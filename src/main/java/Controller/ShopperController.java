@@ -6,6 +6,10 @@ import Model.Shopper;
 import java.util.ArrayList;
 
 public class ShopperController {
+    public static void showPersonalInfo(){
+        //TODO
+    }
+
     public static void changePersonalInfo(Shopper shopper, String field, String newInfo){
         //TODO
     }

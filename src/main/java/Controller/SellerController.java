@@ -6,6 +6,9 @@ import Model.Seller;
 import java.util.ArrayList;
 
 public class SellerController {
+    public static void showPersonalInfo(){
+        //TODO
+    }
 
     public static void changePersonalInfo(Seller seller, String field, String newInfo){
         //TODO
