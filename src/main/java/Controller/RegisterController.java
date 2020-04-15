@@ -18,4 +18,8 @@ public class RegisterController {
     public static boolean canAddNewAdmin(Admin admin){
         //TODO
     }
+
+    public boolean isTherePersonWithUserName(String userName){
+        //TODO
+    }
 }
