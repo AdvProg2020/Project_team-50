@@ -1,7 +1,5 @@
 package Model;
 
-import jdk.nashorn.internal.runtime.regexp.joni.ast.StringNode;
-
 import java.util.ArrayList;
 
 public class Category {
@@ -9,13 +7,13 @@ public class Category {
     public static ArrayList<Category> allCategories;
     public static ArrayList<Category> subCategories;
     private ArrayList<Product> allProducts;
-    //ویژگی های مخصوص
+    private ArrayList<String> features;
 
-
-    public Category(String name, ArrayList<Product> allProducts) {
+    public Category(String name, ArrayList<String> features,ArrayList<Product> allProducts) {
         this.name = name;
         allCategories = new ArrayList<Category>();
         subCategories = new ArrayList<Category>();
+        this.features = features;
         this.allProducts = allProducts;
     }
 
@@ -41,5 +39,9 @@ public class Category {
 
     public void deleteSubCategory(Category subCategories){
         //TODO
+    }
+
+    public ArrayList<String> getFeatures() {
+        return features;
     }
 }
