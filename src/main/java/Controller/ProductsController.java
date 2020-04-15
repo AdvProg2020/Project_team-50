@@ -37,5 +37,16 @@ public class ProductsController {
         //TODO
     }
 
+    public void digest(){
+        //TODO
+    }
+
+    public ArrayList<Product> compare(String productId){
+        //TODO
+    }
+
+    public void postComment(String title, String content){
+        //TODO
+    }
 
 }
