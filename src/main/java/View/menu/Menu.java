@@ -1,4 +1,27 @@
 package View.menu;
 
-public class Menu {
+import java.util.HashMap;
+import java.util.Scanner;
+
+public abstract class Menu {
+    private String name;
+    private Menu parentMenu;
+    private HashMap<Integer, Menu> subMenus;
+    private static Scanner scanner;
+
+    public Menu(String name, Menu parentMenu) {
+        this.name = name;
+        this.parentMenu = parentMenu;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public static void setScanner(Scanner scanner) {
+        Menu.scanner = scanner;
+    }
+
+    public void show() {
+    }
 }
