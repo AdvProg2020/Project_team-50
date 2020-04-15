@@ -1,4 +1,4 @@
-package View;
+package View.menu;
 
 import java.util.HashMap;
 import java.util.Scanner;
