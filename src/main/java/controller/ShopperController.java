@@ -1,8 +1,16 @@
 package controller;
 
+import model.account.Person;
 import model.account.Shopper;
 
-public class ShopperController {
+public class ShopperController extends Account {
+    private Shopper shopper;
+
+    public ShopperController(Shopper shopper) {
+        super(shopper);
+        this.shopper = shopper;
+    }
+
     public static void showPersonalInfo(){
         //TODO
     }
