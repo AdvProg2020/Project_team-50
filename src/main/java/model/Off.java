@@ -61,15 +61,7 @@ public class Off {
         return offAmount;
     }
 
-    public void addOff(Off off){
-        //TODO
-    }
-
-    public void addProductToOff(Product product){
-        //TODO
-    }
-
-    public void deleteProductFromOff(Product product){
-        //TODO
+    public ArrayList<Product> getAllProducts() {
+        return allProducts;
     }
 }
