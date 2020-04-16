@@ -1,6 +1,6 @@
 package model.account;
 
-import model.BuyLog;
+import model.log.BuyLog;
 import model.Cart;
 
 import java.util.ArrayList;
@@ -13,15 +13,8 @@ public class Shopper extends Person {
     public Shopper(String userName, String firstName, String lastName, String eMail, String phoneNumber, String password, double credit) {
         super(userName, firstName, lastName, eMail, phoneNumber, password);
         this.credit = credit;
+        this.cart = new Cart();
         allPerson.add(this);
-    }
-
-    public void showPersonalAccountInfo(){
-        //TODO
-    }
-
-    public void changePersonalInfo(){
-        //TODO
     }
 
     public void setCredit(double credit) {
@@ -32,20 +25,24 @@ public class Shopper extends Person {
         return credit;
     }
 
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
+
     public Cart getCart() {
         return cart;
     }
 
-    public void showProducts(String productId){
+    public boolean canBuy(){
         //TODO
     }
 
-    public  void buy(){
-        //TODO
+    public void setBuyLogs(ArrayList<BuyLog> buyLogs) {
+        this.buyLogs = buyLogs;
     }
 
-    public boolean doesHaveEnoughCriditToBuyProduct(double credit){
-        //TODO
+    public ArrayList<BuyLog> getBuyLogs() {
+        return buyLogs;
     }
 
 }

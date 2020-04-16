@@ -1,8 +1,16 @@
 package controller;
 
+import model.account.Person;
 import model.account.Shopper;
 
-public class ShopperController {
+public class ShopperController extends Account {
+    private Shopper shopper;
+
+    public ShopperController(Shopper shopper) {
+        super(shopper);
+        this.shopper = shopper;
+    }
+
     public static void showPersonalInfo(){
         //TODO
     }
@@ -11,15 +19,11 @@ public class ShopperController {
         //TODO
     }
 
-    public static void showProducts(){
+    public static void scoreProducts(){
         //TODO
     }
 
-    public static void  addProduct(String productId){
-        //TODO
-    }
-
-    public static void deleteProduct(String productId){
+    public void postComment(Shopper shopper, String title, String content){
         //TODO
     }
 

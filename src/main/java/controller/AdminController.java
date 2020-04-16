@@ -6,7 +6,14 @@ import model.account.Person;
 
 import java.util.ArrayList;
 
-public class AdminController {
+public class AdminController extends Account {
+    private Admin admin;
+
+    public AdminController(Admin admin) {
+        super(admin);
+        this.admin = admin;
+    }
+
     public static void showPersonalInfo(){
         //TODO
     }

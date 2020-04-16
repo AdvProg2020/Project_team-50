@@ -1,8 +1,8 @@
 package model.account;
 
-import model.BuyLog;
+import model.log.BuyLog;
 import model.CodedDiscount;
-import model.SellLog;
+import model.log.SellLog;
 
 import java.util.ArrayList;
 
@@ -33,10 +33,6 @@ public class Person {
     }
 
     public boolean isTherePersonWithUserName(String userName){
-        //TODO
-    }
-
-    public static void deleteAccount(Person person){
         //TODO
     }
 

@@ -2,19 +2,21 @@ package model.account;
 
 import model.Off;
 import model.Product;
-import model.SellLog;
+import model.log.SellLog;
 
 import java.util.ArrayList;
 
 public class Seller extends Person {
     private String factoryName;
+    private double credit;
     public ArrayList<Product> allProducts = new ArrayList<Product>();
     public ArrayList<Off> allOffers = new ArrayList<Off>();
     public ArrayList<SellLog> sellLogs = new ArrayList<SellLog>();
 
-    public Seller(String userName, String firstName, String lastName, String eMail, String phoneNumber, String password, String factoryName) {
+    public Seller(String userName, String firstName, String lastName, String eMail, String phoneNumber, String password, String factoryName, double credit) {
         super(userName, firstName, lastName, eMail, phoneNumber, password);
         this.factoryName = factoryName;
+        this.credit = credit;
         allPerson.add(this);
     }
 
@@ -26,40 +28,35 @@ public class Seller extends Person {
         return factoryName;
     }
 
-    public void showPersonalAccountInfo(){
-        //TODO
+    public void setCredit(double credit) {
+        this.credit = credit;
     }
 
-    public void changePersonalInfo(){
-        //TODO
+    public double getCredit() {
+        return credit;
     }
 
-    public void showFactoryInfo(){
-        //TODO
+    public void setAllProducts(ArrayList<Product> allProducts) {
+        this.allProducts = allProducts;
     }
 
-    public void showSalesProducts(){
-        //TODO
+    public ArrayList<Product> getAllProducts() {
+        return allProducts;
     }
 
-    public void addProduct(){
-        //TODO
+    public void setAllOffers(ArrayList<Off> allOffers) {
+        this.allOffers = allOffers;
     }
 
-    public void editProduct(String productId){
-        //TODO
+    public ArrayList<Off> getAllOffers() {
+        return allOffers;
     }
 
-    public void deleteProduct(){
-        //TODO
+    public void setSellLogs(ArrayList<SellLog> sellLogs) {
+        this.sellLogs = sellLogs;
     }
 
-    public void addNewOff(){
-        //TODO
+    public ArrayList<SellLog> getSellLogs() {
+        return sellLogs;
     }
-
-    public void editOff(String offId){
-        //TODO
-    }
-
 }

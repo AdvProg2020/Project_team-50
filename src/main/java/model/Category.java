@@ -25,20 +25,32 @@ public class Category {
         return name;
     }
 
-    public static boolean hasCategoryWithName(String name){
-        //TODO
+    public static void setAllCategories(ArrayList<Category> allCategories) {
+        Category.allCategories = allCategories;
     }
 
-    public void addNewCategory(){
-        //TODO
+    public static ArrayList<Category> getAllCategories() {
+        return allCategories;
     }
 
-    public void addSubCategory(Category subCategories){
-        //TODO
+    public void setAllProducts(ArrayList<Product> allProducts) {
+        this.allProducts = allProducts;
     }
 
-    public void deleteSubCategory(Category subCategories){
-        //TODO
+    public ArrayList<Product> getAllProducts() {
+        return allProducts;
+    }
+
+    public static void setSubCategories(ArrayList<Category> subCategories) {
+        Category.subCategories = subCategories;
+    }
+
+    public static ArrayList<Category> getSubCategories() {
+        return subCategories;
+    }
+
+    public void setFeatures(ArrayList<String> features) {
+        this.features = features;
     }
 
     public ArrayList<String> getFeatures() {

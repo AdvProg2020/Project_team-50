@@ -1,11 +1,19 @@
 package controller;
 
 import model.Product;
+import model.account.Person;
 import model.account.Seller;
 
 import java.util.ArrayList;
 
-public class SellerController {
+public class SellerController extends Account{
+    private Seller seller;
+
+    public SellerController(Seller seller) {
+        super(seller);
+        this.seller = seller;
+    }
+
     public static void showPersonalInfo(){
         //TODO
     }

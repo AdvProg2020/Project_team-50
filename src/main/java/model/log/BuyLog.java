@@ -1,12 +1,14 @@
-package model;
+package model.log;
 
+import model.Enum.DeliveryStatus;
+import model.Product;
 import model.account.Seller;
 
 import java.util.ArrayList;
 import java.util.Date;
 
 public class BuyLog {
-    private String logId;
+    private final String logId;
     private Date date;
     private double payment;
     private double discountAmount;
@@ -22,10 +24,6 @@ public class BuyLog {
         this.seller = seller;
         this.products = products;
         buyLogs.add(this);
-    }
-
-    public void setLogId(String logId) {
-        this.logId = logId;
     }
 
     public String getLogId() {

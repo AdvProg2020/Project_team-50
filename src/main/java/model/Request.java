@@ -1,11 +1,12 @@
 package model;
 
+import model.Enum.RequstType;
 import model.account.Seller;
 
 import java.util.ArrayList;
 
 public class Request {
-    private String requestId;
+    private final String requestId;
     private Seller seller;
     private RequstType requstType;
     private ArrayList<Request> allRequests = new ArrayList<Request>();;
@@ -17,23 +18,23 @@ public class Request {
         allRequests.add(this);
     }
 
-    public static Request getRequestById(String requestId){
-        //TODO
+    public String getRequestId() {
+        return requestId;
     }
 
-    public static boolean hasRequestById(String requestId){
-        //TODO
+    public Seller getSeller() {
+        return seller;
     }
 
-    public static void deleteRequestById(Request request){
-        //TODO
+    public ArrayList<Request> getAllRequests() {
+        return allRequests;
     }
 
-    public void setRequstType(RequstType requstType) {
+    public void setRequestType(RequstType requstType) {
         this.requstType = requstType;
     }
 
-    public RequstType getRequstType() {
+    public RequstType getRequestType() {
         return requstType;
     }
 }
