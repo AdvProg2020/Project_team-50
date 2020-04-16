@@ -20,40 +20,4 @@ public class Admin extends Person {
         allRequests = new ArrayList<Request>();
         allPerson.add(this);
     }
-
-    public void showPersonalAccountInfo(){
-        //TODO
-    }
-
-    public void changePersonalInfo(){
-        //TODO
-    }
-
-    public void manageRequest(Request request){
-        //TODO
-    }
-
-    public void addCodedDiscount(){
-        //TODO
-    }
-
-    public  void editCodedDiscount(CodedDiscount codedDiscount){
-        //TODO
-    }
-
-    public void addNewAdmin(){
-        //TODO
-    }
-
-    public void deleteUser(){
-        //TODO
-    }
-
-    public void addCategory(){
-        //TODO
-    }
-
-    public void editCategory(Category category){
-        //TODO
-    }
 }
