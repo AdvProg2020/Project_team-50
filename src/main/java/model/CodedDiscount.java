@@ -57,23 +57,7 @@ public class CodedDiscount {
         return maxDiscountRate;
     }
 
-    public static CodedDiscount getCodedDiscountById(String discountId){
-        //TODO
-    }
-
-    public void addCodedDiscount(){
-        //TODO
-    }
-
-    public void deleteCodedDiscount(CodedDiscount codedDiscount){
-        //TODO
-    }
-
     public void setUsageCount(HashMap<Person, Integer> usageCount) {
         this.usageCount = usageCount;
-    }
-
-    public static boolean canShopperUseCodedDiscount(Shopper shopper){
-        //TODO
     }
 }
