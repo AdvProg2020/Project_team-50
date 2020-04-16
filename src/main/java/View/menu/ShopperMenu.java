@@ -1,4 +1,10 @@
-package View.menu;
+package view.menu;
 
-public class ShopperMenu extends Menu {
+import View.menu.Menu;
+
+public class ShopperMenu extends View.menu.Menu {
+
+    public ShopperMenu(Menu parentMenu) {
+        super("ShopperMenu", parentMenu);
+    }
 }
