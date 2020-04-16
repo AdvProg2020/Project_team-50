@@ -1,6 +1,7 @@
 package controller;
 
 import model.Category;
+import model.Comment;
 import model.Product;
 
 import java.util.ArrayList;
@@ -45,8 +46,7 @@ public class ProductsController {
         //TODO
     }
 
-    public void postComment(String title, String content){
+    public ArrayList<Comment> showComments(){
         //TODO
     }
-
 }
