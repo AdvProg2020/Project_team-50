@@ -30,4 +30,8 @@ public class CartController {
     public Cart showCart(){
         //TODO
     }
+
+    public double showTotalAmountOfCart(Cart cart){
+        //TODO
+    }
 }
