@@ -1,4 +1,4 @@
 package View.menu;
 
-public class ShopperMenu extends Menu{
+public class ShopperMenu extends Menu {
 }
