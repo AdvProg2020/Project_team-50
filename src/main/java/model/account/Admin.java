@@ -20,4 +20,9 @@ public class Admin extends Person {
         allRequests = new ArrayList<Request>();
         allPerson.add(this);
     }
+
+    public ArrayList<Request> getAllRequests() {
+        return allRequests;
+    }
+
 }
