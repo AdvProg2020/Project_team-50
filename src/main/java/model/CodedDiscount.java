@@ -1,7 +1,6 @@
 package model;
 
 import model.account.Person;
-import model.account.Shopper;
 
 import java.util.ArrayList;
 import java.util.Date;
