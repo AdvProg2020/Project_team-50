@@ -7,6 +7,6 @@ public class RegistrationMenu extends Menu{
     }
 
     public void register(String type, String userName){
-        //TODO
+        //TODO after get
     }
 }

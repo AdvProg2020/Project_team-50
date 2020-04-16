@@ -1,13 +1,13 @@
 package view;
 
+import java.util.HashMap;
+
 public class LoginMenu extends Menu {
     public LoginMenu(Menu parentMenu) {
         super("LoginMenu", parentMenu);
+        HashMap<Integer, Menu> submenus = new HashMap<Integer, Menu>();
+        submenus.put(1, new RegistrationMenu(this));
         this.setSubmenus(submenus);
-    }
-
-    private void register(String type, String userName){
-        //TODO
     }
 
     private void login(String userName){
