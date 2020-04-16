@@ -4,7 +4,7 @@ import model.account.Shopper;
 
 public class Score {
     private Shopper shopper;
-    private Product product;
+    private final Product product;
     private double rating;
 
     public Score(Shopper shopper, Product product, double rating) {
@@ -13,11 +13,15 @@ public class Score {
         this.rating = rating;
     }
 
-    public static boolean canShopperRateThisProduct(Shopper shopper){
-        //TODO
+    public void setRating(double rating) {
+        this.rating = rating;
     }
 
-    public static double calculateAverageScore(Product product){
-        //TODO
+    public double getRating() {
+        return rating;
+    }
+
+    public Product getProduct() {
+        return product;
     }
 }
