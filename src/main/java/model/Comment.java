@@ -1,5 +1,6 @@
 package model;
 
+import model.Enum.CommentCondition;
 import model.account.Shopper;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package model;
+package model.Enum;
 
 public enum RequstType {
     EDIT_PRODUCT, REMOVE_PRODUCT, ADD_PRODUCT, EDIT_AUCTION, ADD_AUCTION, DELETE_AUCTION;

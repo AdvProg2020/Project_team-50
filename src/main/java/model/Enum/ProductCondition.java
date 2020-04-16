@@ -1,5 +1,5 @@
-package model;
+package model.Enum;
 
-public enum OffCondition {
+public enum ProductCondition {
     REVIEW_FOR_CONSTRUCTION, REVIEW_FOR_EDITING, ACCEPTED;
 }

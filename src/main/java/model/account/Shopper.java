@@ -1,6 +1,6 @@
 package model.account;
 
-import model.BuyLog;
+import model.log.BuyLog;
 import model.Cart;
 
 import java.util.ArrayList;

@@ -2,7 +2,7 @@ package model.account;
 
 import model.Off;
 import model.Product;
-import model.SellLog;
+import model.log.SellLog;
 
 import java.util.ArrayList;
 

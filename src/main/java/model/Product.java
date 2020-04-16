@@ -1,5 +1,6 @@
 package model;
 
+import model.Enum.ProductCondition;
 import model.account.Seller;
 
 import java.util.ArrayList;

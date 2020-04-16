@@ -1,5 +1,7 @@
-package model;
+package model.log;
 
+import model.Enum.DeliveryStatus;
+import model.Product;
 import model.account.Seller;
 
 import java.util.ArrayList;
