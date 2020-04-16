@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 
 public class Product {
-    private String productId;
+    private final String productId;
     private ProductCondition productCondition;
     private String name;
     private String factoryName;
@@ -16,7 +16,7 @@ public class Product {
     private Seller sellers;
     private boolean isExisting;
     private Category category;
-    //مشخصات خاص دسته
+    private ArrayList<String> features;
     private String description;
     private ArrayList<Score> scores;
     private ArrayList<Comment> comments;
@@ -31,10 +31,15 @@ public class Product {
         this.isExisting = isExisting;
         this.category = category;
         this.description = description;
+        features = new ArrayList<String>();
         scores = new ArrayList<Score>();
         comments = new ArrayList<Comment>();
         products = new ArrayList<Product>();
         products.add(this);
+    }
+
+    public String getProductId() {
+        return productId;
     }
 
     public void setName(String name) {
@@ -61,6 +66,14 @@ public class Product {
         return price;
     }
 
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
     public void setComments(ArrayList<Comment> comments) {
         this.comments = comments;
     }
@@ -68,7 +81,6 @@ public class Product {
     public ArrayList<Comment> getComments() {
         return comments;
     }
-
 
     public void setFactoryName(String factoryName) {
         this.factoryName = factoryName;
@@ -78,15 +90,31 @@ public class Product {
         return factoryName;
     }
 
-    public static void getProductById(String productId){
-        //TODO
+    public void setFeatures(ArrayList<String> features) {
+        this.features = features;
     }
 
-    public static boolean hasProductWithId(String productId){
-        //TODO
+    public ArrayList<String> getFeatures() {
+        return features;
     }
 
-    public void deleteProduct(Product product){
-        //TODO
+    public void setScores(ArrayList<Score> scores) {
+        this.scores = scores;
+    }
+
+    public ArrayList<Score> getScores() {
+        return scores;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public ArrayList<Product> getProducts() {
+        return products;
     }
 }
