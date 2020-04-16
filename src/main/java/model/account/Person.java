@@ -36,10 +36,6 @@ public class Person {
         //TODO
     }
 
-    public static void deleteAccount(Person person){
-        //TODO
-    }
-
     public void setFirstName(String firstName){
         this.firstName = firstName;
     }
