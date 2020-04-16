@@ -19,15 +19,11 @@ public class ShopperController extends Account {
         //TODO
     }
 
-    public static void showProducts(){
+    public static void scoreProducts(){
         //TODO
     }
 
-    public static void  addProduct(String productId){
-        //TODO
-    }
-
-    public static void deleteProduct(String productId){
+    public void postComment(Shopper shopper, String title, String content){
         //TODO
     }
 
