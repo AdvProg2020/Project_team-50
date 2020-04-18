@@ -14,47 +14,47 @@ public class SellerController extends Account{
         this.seller = seller;
     }
 
-    public static void showPersonalInfo(){
+    public void showPersonalInfo(){
         //TODO
     }
 
-    public static void changePersonalInfo(Seller seller, String field, String newInfo){
+    public void changePersonalInfo(Seller seller, String field, String newInfo){
         //TODO
     }
 
-    public static void showFactoryInfo(Seller seller){
+    public void showFactoryInfo(Seller seller){
         //TODO
     }
 
-    public static void addProduct(String productId){
+    public void addProduct(String productId){
         //TODO
     }
 
-    public static  void editProduct(String productId){
+    public void editProduct(String productId){
         //TODO
     }
 
-    public static  void deleteProduct(String productId){
+    public void deleteProduct(String productId){
         //TODO
     }
 
-    public static ArrayList<Product> showProducts(){
+    public ArrayList<Product> showProducts(){
         //TODO
     }
 
-    public static ArrayList<Product> showSoldProducts(){
+    public ArrayList<Product> showSoldProducts(){
         //TODO
     }
 
-    public static void addOff(Seller seller){
+    public void addOff(Seller seller){
         //TODO
     }
 
-    public static void editOff(String offId){
+    public void editOff(String offId){
         //TODO
     }
 
-    public static void showCredit(Seller seller){
+    public void showCredit(Seller seller){
         //TODO
     }
 }

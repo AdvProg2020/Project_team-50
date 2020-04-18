@@ -14,63 +14,63 @@ public class AdminController extends Account {
         this.admin = admin;
     }
 
-    public static void showPersonalInfo(){
+    public void showPersonalInfo(){
         //TODO
     }
 
-    public static void changePersonalInfo(Admin admin, String field, String newInfo){
+    public void changePersonalInfo(Admin admin, String field, String newInfo){
         //TODO
     }
 
-    public static ArrayList<Request> showRequestsList(){
+    public ArrayList<Request> showRequestsList(){
         //TODO
     }
 
-    public static boolean acceptOrDecline(String requestId, boolean isAccepted){
+    public boolean acceptOrDecline(String requestId, boolean isAccepted){
         //TODO
     }
 
-    public static void addCodedDiscount(Admin admin){
+    public void addCodedDiscount(Admin admin){
         //TODO
     }
 
-    public static void editCodedDiscount(String discountId, String field, String newInfo){
+    public void editCodedDiscount(String discountId, String field, String newInfo){
         //TODO
     }
 
-    public static void deleteCodedDiscount(String discountId){
+    public void deleteCodedDiscount(String discountId){
         //TODO
     }
 
-    public static ArrayList<CodedDiscount> showCodedDiscounts(){
+    public ArrayList<CodedDiscount> showCodedDiscounts(){
         //TODO
     }
 
-    public static ArrayList<Person> showAllUsers(){
+    public ArrayList<Person> showAllUsers(){
         //TODO
     }
 
-    public static void deleteUser(String userName){
+    public void deleteUser(String userName){
         //TODO
     }
 
-    public static void addNewAdmin(){
+    public void addNewAdmin(){
         //TODO
     }
 
-    public static ArrayList<Category> showCategories(){
+    public ArrayList<Category> showCategories(){
         //TODO
     }
 
-    public static void addCategory(String name, ArrayList<Product> productId){
+    public void addCategory(String name, ArrayList<Product> productId){
         //TODO
     }
 
-    public static void editCategory(Category category, String field, String newInfo){
+    public void editCategory(Category category, String field, String newInfo){
         //TODO
     }
 
-    public static void deleteCategory(String name){
+    public void deleteCategory(String name){
         //TODO
     }
 }

@@ -15,7 +15,7 @@ public class RegisterController {
         //TODO credit = 0
     }
 
-    public static boolean canAddNewAdmin(Admin admin){
+    public boolean canAddNewAdmin(Admin admin){
         //TODO
     }
 
