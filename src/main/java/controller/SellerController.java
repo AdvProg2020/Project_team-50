@@ -19,7 +19,27 @@ public class SellerController extends Account{
     }
 
     public static void changePersonalInfo(Seller seller, String field, String newInfo){
-        //TODO
+        if (field.equalsIgnoreCase("first name")){
+            seller.setFirstName(newInfo);
+        }
+        if (field.equalsIgnoreCase("last name")){
+            seller.setLastName(newInfo);
+        }
+        if (field.equalsIgnoreCase("email")){
+            seller.seteMail(newInfo);
+        }
+        if (field.equalsIgnoreCase("phone number")){
+            seller.setPhoneNumber(newInfo);
+        }
+        if (field.equalsIgnoreCase("password")){
+            seller.setPassword(newInfo);
+        }
+        if (field.equalsIgnoreCase("first name")){
+            seller.setFirstName(newInfo);
+        }
+        if (field.equalsIgnoreCase("factory name")){
+            seller.setFactoryName(newInfo);
+        }
     }
 
     public static void showFactoryInfo(Seller seller){
