@@ -3,7 +3,7 @@ package view;
 public class OffMenu extends Menu{
     public OffMenu(Menu parentMenu) {
         super("OffMenu", parentMenu);
-        this.setSubmenus(submenus);
+        this.setSubmenus(subMenus);
     }
 
     @Override
