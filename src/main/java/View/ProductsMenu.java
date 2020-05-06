@@ -1,10 +1,16 @@
 package view;
 
+import view.menu.CategoryMenu;
+
+import java.util.HashMap;
+
 public class ProductsMenu extends Menu{
 
     public ProductsMenu(Menu parentMenu) {
         super("ProductsMenu", parentMenu);
-        this.setSubmenus(submenus);
+        HashMap<Integer, Menu> subMenus = new HashMap<Integer, Menu>();
+        subMenus.put(1, new CategoryMenu(this));
+        this.setSubmenus(subMenus);
     }
 
     @Override
