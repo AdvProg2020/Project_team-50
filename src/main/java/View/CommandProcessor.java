@@ -1,6 +1,8 @@
 package view;
 
+import java.util.Scanner;
+
 public class CommandProcessor {
-    public void RunWithMenu() {
+    public void Start() {
     }
 }
