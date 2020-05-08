@@ -22,7 +22,7 @@ public class CategoryMenu extends Menu {
     }
 
     private Menu SearchMenu() {
-        return new Menu("Search", this) {
+        return new Menu("SearchMenu", this) {
             @Override
             public void show() {
                 super.show();
