@@ -1,4 +1,4 @@
 package view;
 
-public enum CommandProcessor {
+public class CommandProcessor {
 }
