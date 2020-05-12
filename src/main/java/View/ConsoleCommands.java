@@ -27,7 +27,23 @@ public enum ConsoleCommands {
     MANAGE_CATEGORIES("(?)manage\\s+categories"),
     EDIT_CATEGORIES("(?)edit\\s+(\\w+)"),
     ADD_CATEGORIES("(?)add\\s+(\\w+)"),
-    REMOVE_CATEGORIES("(?)remove\\s+(\\w+)");
+    REMOVE_CATEGORIES("(?)remove\\s+(\\w+)"),
+    VIEW_PERSONAL_SELLER_INFO("(?)view\\s+personal\\s+info"),
+    EDIT_PERSONAL_SELLER_INFO("(?)edit\\s+(\\w+)"),
+    VIEW_COMPANY_INFO("(?)view\\s+company\\s+information"),
+    VIEW_SALES_HISTORY("(?)view\\s+sales\\s+history"),
+    MANAGE_SELLER_PRODUCTS("(?)manage\\s+products"),
+    VIEW_SELLER_PRODUCTS("(?)view\\s+(\\w+)"),
+    VIEW_BUYERS_SELLER_PRODUCTS("(?)view\\s+buyers\\s+(\\w+)"),
+    EDIT_SELLER_PRODUCTS("(?)edit\\s+(\\w+)"),
+    ADD_SELLER_PRODUCTS("(?)add\\s+product"),
+    REMOVE_SELLER_PRODUCTS("(?)remove\\s+product\\s+(\\w+)"),
+    SHOW_SELLER_CATEGORIES("(?)show\\s+categories"),
+    MANAGE_SELLER_OFFS("(?)view\\s+offs"),
+    VIEW_SELLER_OFFS("(?)view\\s+(\\w+)"),
+    EDIT_SELLER_OFFS("(?)edit\\s+(\\w+)"),
+    ADD_SELLER_OFFS("(?)add\\s+(\\w+)"),
+    SELLER_BALANCE("(?)view\\s+balance");
     private final Pattern commandsPattern;
 
     ConsoleCommands(String commandsPatternString) {
