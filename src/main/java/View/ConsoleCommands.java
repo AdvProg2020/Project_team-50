@@ -59,7 +59,6 @@ public enum ConsoleCommands {
     RATE_SHOPPER("(?)rate\\s+(\\w+)(\\w+)"),
     SHOPPER_BALANCE("(?)view\\s+balance"),
     SHOPPER_DISCOUNT_CODE("(?)view\\s+discount\\s+codes");
-
     private final Pattern commandsPattern;
 
     ConsoleCommands(String commandsPatternString) {
