@@ -43,7 +43,22 @@ public enum ConsoleCommands {
     VIEW_SELLER_OFFS("(?)view\\s+(\\w+)"),
     EDIT_SELLER_OFFS("(?)edit\\s+(\\w+)"),
     ADD_SELLER_OFFS("(?)add\\s+(\\w+)"),
-    SELLER_BALANCE("(?)view\\s+balance");
+    SELLER_BALANCE("(?)view\\s+balance"),
+    VIEW_PERSONAL_SHOPPER_INFO("(?)view\\s+personal\\s+info"),
+    EDIT_PERSONAL_SHOPPER_INFO("(?)edit\\s+(\\w+)"),
+    VIEW_SHOPPER_CART("(?)view\\s+cart"),
+    SHOW_SHOPPER_PRODUCTS("(?)show\\s+products"),
+    VIEW_SHOPPER_PRODUCTS("(?)view\\s+(\\W+)"),
+    INCREASE_SHOPPER_PRODUCTS("(?)increase\\s+(\\W+)"),
+    DECREASE_SHOPPER_PRODUCTS("(?)decrease\\s+(\\W+)"),
+    SHOW_SHOPPER_TOTAL_PRICE("(?)show\\s+total\\s+price"),
+    PURCHASE_SHOPPER("(?)purchase"),
+    ENTER_PURCHASE("(?)purchase"),
+    VIEW_SHOPPER_ORDERS("(?)view\\s+orders"),
+    SHOW_SHOPPER_ORDER("(?)show\\s+order\\s+(\\w+)"),
+    RATE_SHOPPER("(?)rate\\s+(\\w+)(\\w+)"),
+    SHOPPER_BALANCE("(?)view\\s+balance"),
+    SHOPPER_DISCOUNT_CODE("(?)view\\s+discount\\s+codes");
     private final Pattern commandsPattern;
 
     ConsoleCommands(String commandsPatternString) {
