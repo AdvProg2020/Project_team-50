@@ -72,7 +72,16 @@ public enum ConsoleCommands {
     CHOSEN_SORT("(?i)current\\s+sort"),
     DISABLE_SORT("(?i)disable\\s+sort"),
     VIEW_PRODUCTS("(?i)view\\s+products"),
-    SHOW_PRODUCTS("(?i)show\\s+product(\\w+)");
+    SHOW_PRODUCTS("(?i)show\\s+product(\\w+)"),
+    DIGEST("(?i)digest"),
+    ADD_TO_CART("(?i)add\\s+to\\s+cart"),
+    SELECT_SELLER("(?i)select\\s+seller(\\w+)"),
+    PRODUCT_ATTRIBUTES("(?i)attributes"),
+    COMPARING("(?i)compare\\s+(\\w+)"),
+    COMMENTS("(?i)comments"),
+    ADD_COMMENTS("(?i)add\\s+comment\ntitle:\ncontent:"),
+    OFFS("(?i)offs"),
+    AUCTION_PRODUCTS("(?i)show\\s+product(\\w+)");
     private final Pattern commandsPattern;
 
     ConsoleCommands(String commandsPatternString) {
