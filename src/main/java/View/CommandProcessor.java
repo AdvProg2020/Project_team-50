@@ -14,12 +14,13 @@ public class CommandProcessor {
             } else if (ConsoleCommands.REGISTER.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.REGISTER.getStringMatcher(command);
                 if (matcher.find()) {
-                    //TODO
+                    String type = matcher.group(1);
+                    String userName = matcher.group(2);
                 }
             } else if (ConsoleCommands.LOGIN.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.LOGIN.getStringMatcher(command);
                 if (matcher.find()) {
-                    //TODO
+                    String userName = matcher.group(1);
                 }
             } else if (ConsoleCommands.VIEW_MANAGER_PERSONAL_INFO.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.VIEW_MANAGER_PERSONAL_INFO.getStringMatcher(command);
@@ -29,7 +30,7 @@ public class CommandProcessor {
             } else if (ConsoleCommands.EDIT_MANAGER_PERSONAL_INFO.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.EDIT_MANAGER_PERSONAL_INFO.getStringMatcher(command);
                 if (matcher.find()) {
-                    //TODO
+                    String field = matcher.group(1);
                 }
             } else if (ConsoleCommands.MANAGING.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.MANAGING.getStringMatcher(command);
@@ -39,12 +40,12 @@ public class CommandProcessor {
             } else if (ConsoleCommands.VIEW_USER.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.VIEW_USER.getStringMatcher(command);
                 if (matcher.find()) {
-                    //TODO
+                    String userName = matcher.group(1);
                 }
             } else if (ConsoleCommands.DELETE_USER.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.DELETE_USER.getStringMatcher(command);
                 if (matcher.find()) {
-                    //TODO
+                    String userName = matcher.group(1);
                 }
             }
         }
