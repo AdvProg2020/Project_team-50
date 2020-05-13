@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 
 public enum ConsoleCommands {
     EXIT("(?i)exit"),
-    LOGIN("(?i)login\\s+(\\w+)"),
     REGISTER("(?i)create\\s+account\\s+(\\w+)\\s+(\\w+)"),
+    LOGIN("(?i)login\\s+(\\w+)"),
     //USER_MENU("(?i)view\\s+personal\\s+info"),
     VIEW_MANAGER_PERSONAL_INFO("(?i)view\\s+personal\\s+info"),
     EDIT_MANAGER_PERSONAL_INFO("(?i)edit\\s+(\\w+)"),
