@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public enum ConsoleCommands {
+    EXIT("(?i)exit"),
     LOGIN("(?i)login\\s+(\\w+)"),
     REGISTER("(?i)create\\s+account\\s+(\\w+)\\s+(\\w+)"),
     //USER_MENU("(?i)view\\s+personal\\s+info"),
