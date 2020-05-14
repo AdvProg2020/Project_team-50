@@ -34,9 +34,6 @@ public class SellerController extends Account{
         if (field.equalsIgnoreCase("password")){
             seller.setPassword(newInfo);
         }
-        if (field.equalsIgnoreCase("first name")){
-            seller.setFirstName(newInfo);
-        }
         if (field.equalsIgnoreCase("factory name")){
             seller.setFactoryName(newInfo);
         }

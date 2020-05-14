@@ -13,7 +13,7 @@ public class Person {
     protected String eMail;
     protected String phoneNumber;
     protected String password;
-    public ArrayList<Person> allPerson = new ArrayList<Person>();
+    public static ArrayList<Person> allPerson = new ArrayList<Person>();
     public ArrayList<CodedDiscount> codedDiscounts = new ArrayList<CodedDiscount>();
     public ArrayList<BuyLog> buyLogs = new ArrayList<BuyLog>();
     public ArrayList<SellLog> sellLogs = new ArrayList<SellLog>();
@@ -74,6 +74,10 @@ public class Person {
 
     public String getPassword() {
         return password;
+    }
+
+    public static void deletePerson(Person person) {
+        allPerson.remove(person);
     }
 
     @Override
