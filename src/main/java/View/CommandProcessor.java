@@ -16,11 +16,15 @@ public class CommandProcessor {
                 if (matcher.find()) {
                     String type = matcher.group(1);
                     String userName = matcher.group(2);
+                    RegistrationMenu registrationMenu = null;
+                    registrationMenu.register(type, userName);
                 }
             } else if (ConsoleCommands.LOGIN.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.LOGIN.getStringMatcher(command);
                 if (matcher.find()) {
                     String userName = matcher.group(1);
+                    LoginMenu loginMenu = null;
+                    loginMenu.login(userName);
                 }
             } else if (ConsoleCommands.VIEW_MANAGER_PERSONAL_INFO.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.VIEW_MANAGER_PERSONAL_INFO.getStringMatcher(command);
