@@ -1,26 +1,27 @@
 package model;
 
 import model.account.Seller;
+import model.account.Shopper;
 
 import java.util.HashMap;
 
 public class Cart {
-    private HashMap<Product, Seller> productSupplier;
     private HashMap<Product, Integer> numberOfProducts;
-    private CodedDiscount codedDiscount;
+    private Shopper shopper;
 
-    public Cart(){
-        productSupplier = new HashMap<Product, Seller>();
+    public Cart(Shopper shopper){
         numberOfProducts = new HashMap<Product, Integer>();
-        this.codedDiscount = null;
+        this.shopper = shopper;
     }
 
-    public void setProductSupplier(HashMap<Product, Seller> productSupplier) {
-        this.productSupplier = productSupplier;
+    public void increaseProduct(Product product) {
+        int productValue = numberOfProducts.get(product);
+        numberOfProducts.put(product, productValue+1);
     }
 
-    public HashMap<Product, Seller> getProductSupplier() {
-        return productSupplier;
+    public void decreaseProduct(Product product) {
+        int productValue = numberOfProducts.get(product);
+        numberOfProducts.put(product, productValue-1);
     }
 
     public void setNumberOfProducts(HashMap<Product, Integer> numberOfProducts) {
@@ -31,11 +32,4 @@ public class Cart {
         return numberOfProducts;
     }
 
-    public void setCodedDiscount(CodedDiscount codedDiscount) {
-        this.codedDiscount = codedDiscount;
-    }
-
-    public CodedDiscount getCodedDiscount() {
-        return codedDiscount;
-    }
 }
