@@ -16,8 +16,9 @@ public class Off {
     private Seller seller;
     private ArrayList<Off> allOff = new ArrayList<Off>();
 
-    public Off(String offId, Date startTime, Date endTime, double offAmount, Seller seller) {
+    public Off(String offId, OffCondition offCondition, Date startTime, Date endTime, double offAmount, Seller seller) {
         this.offId = offId;
+        this.offCondition = offCondition;
         this.startTime = startTime;
         this.endTime = endTime;
         this.offAmount = offAmount;
@@ -63,5 +64,17 @@ public class Off {
 
     public ArrayList<Product> getAllProducts() {
         return allProducts;
+    }
+
+    @Override
+    public String toString() {
+        return "Off{" +
+                "offId='" + offId + '\'' +
+                ", offCondition=" + offCondition +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", offAmount=" + offAmount +
+                ", seller=" + seller +
+                '}';
     }
 }
