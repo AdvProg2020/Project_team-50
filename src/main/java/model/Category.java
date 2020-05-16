@@ -9,12 +9,12 @@ public class Category {
     private ArrayList<Product> allProducts;
     private ArrayList<String> features;
 
-    public Category(String name, ArrayList<String> features,ArrayList<Product> allProducts) {
+    public Category(String name, ArrayList<String> features) {
         this.name = name;
+        this.features = features;
         allCategories = new ArrayList<Category>();
         subCategories = new ArrayList<Category>();
-        this.features = features;
-        this.allProducts = allProducts;
+        this.allProducts = new ArrayList<Product>();
     }
 
     public void setName(String name) {
