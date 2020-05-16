@@ -13,10 +13,11 @@ public class Comment {
     private boolean didShopperBuyTheProduct;
     private ArrayList<Comment> allComment = new ArrayList<Comment>();
 
-    public Comment(Shopper shopper, Product product, String commentText, boolean didShopperBuyTheProduct) {
+    public Comment(Shopper shopper, Product product, String commentText, CommentCondition commentCondition, boolean didShopperBuyTheProduct) {
         this.shopper = shopper;
         this.product = product;
         this.commentText = commentText;
+        this.commentCondition = commentCondition;
         this.didShopperBuyTheProduct = didShopperBuyTheProduct;
         allComment.add(this);
     }
