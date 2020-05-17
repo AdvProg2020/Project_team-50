@@ -134,22 +134,29 @@ public class CommandProcessor {
             } else if (ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command);
                 if (matcher.find()) {
-                    //TODO
+                    controller.AdminController adminController = null;
+                    adminController.showCategories();
                 }
             } else if (ConsoleCommands.EDIT_CATEGORIES.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.EDIT_CATEGORIES.getStringMatcher(command);
                 if (matcher.find()) {
                     String category = matcher.group(1);
+                    controller.AdminController adminController = null;
+                    adminController.editCategory();
                 }
             } else if (ConsoleCommands.ADD_CATEGORIES.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.ADD_CATEGORIES.getStringMatcher(command);
                 if (matcher.find()) {
                     String category = matcher.group(1);
+                    controller.AdminController adminController = null;
+                    adminController.addCategory(,category);
                 }
             } else if (ConsoleCommands.REMOVE_CATEGORIES.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.REMOVE_CATEGORIES.getStringMatcher(command);
                 if (matcher.find()) {
                     String category = matcher.group(1);
+                    controller.AdminController adminController = null;
+                    adminController.deleteCategory(category);
                 }
             } else if (ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command);
