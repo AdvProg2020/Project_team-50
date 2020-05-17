@@ -1,5 +1,6 @@
 package view;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 
@@ -158,30 +159,103 @@ public class CommandProcessor {
                     controller.AdminController adminController = null;
                     adminController.deleteCategory(category);
                 }
-            } else if (ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command);
+            } else if (ConsoleCommands.VIEW_SELLER_PERSONAL_INFO.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.VIEW_SELLER_PERSONAL_INFO.getStringMatcher(command);
                 if (matcher.find()) {
-                    String discountCode = matcher.group(1);
+                    controller.SellerController sellerController = null;
+                    sellerController.showPersonalInfo();
                 }
-            } else if (ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command);
+            } else if (ConsoleCommands.EDIT_SELLER_PERSONAL_INFO.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.EDIT_SELLER_PERSONAL_INFO.getStringMatcher(command);
                 if (matcher.find()) {
-                    String discountCode = matcher.group(1);
+                    String field = matcher.group(1);
+                    controller.SellerController sellerController = null;
+                    sellerController.changePersonalInfo(field);
                 }
-            } else if (ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command);
+            } else if (ConsoleCommands.VIEW_COMPANY_INFO.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.VIEW_COMPANY_INFO.getStringMatcher(command);
                 if (matcher.find()) {
-                    String discountCode = matcher.group(1);
+                    controller.SellerController sellerController = null;
+                    sellerController.showFactoryInfo();
                 }
-            } else if (ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command);
+            } else if (ConsoleCommands.VIEW_SALES_HISTORY.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.VIEW_SALES_HISTORY.getStringMatcher(command);
                 if (matcher.find()) {
-                    String discountCode = matcher.group(1);
+                    controller.SellerController sellerController = null;
+                    sellerController.showSoldProducts();
                 }
-            } else if (ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command);
+            } else if (ConsoleCommands.MANAGE_SELLER_PRODUCTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.MANAGE_SELLER_PRODUCTS.getStringMatcher(command);
                 if (matcher.find()) {
-                    String discountCode = matcher.group(1);
+                    //TODO
+                }
+            } else if (ConsoleCommands.VIEW_SELLER_PRODUCTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.VIEW_SELLER_PRODUCTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    String productId = matcher.group(1);
+                    controller.SellerController sellerController = null;
+                    sellerController.showProducts();
+                }
+            } else if (ConsoleCommands.VIEW_BUYERS_SELLER_PRODUCTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.VIEW_BUYERS_SELLER_PRODUCTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    String buyer = matcher.group(1);
+                    //TODO
+                }
+            } else if (ConsoleCommands.EDIT_SELLER_PRODUCTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.EDIT_SELLER_PRODUCTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    String productId = matcher.group(1);
+                    controller.SellerController sellerController = null;
+                    sellerController.editProduct(productId);
+                }
+            } else if (ConsoleCommands.ADD_SELLER_PRODUCTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.ADD_SELLER_PRODUCTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    String productId = matcher.group(1);
+                    controller.SellerController sellerController = null;
+                    sellerController.addProduct(productId);
+                }
+            } else if (ConsoleCommands.REMOVE_SELLER_PRODUCTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.REMOVE_SELLER_PRODUCTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    String productId = matcher.group(1);
+                    controller.SellerController sellerController = null;
+                    sellerController.deleteProduct(productId);
+                }
+            } else if (ConsoleCommands.SHOW_SELLER_CATEGORIES.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.SHOW_SELLER_CATEGORIES.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.MANAGE_SELLER_OFFS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.MANAGE_SELLER_OFFS.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.VIEW_SELLER_OFFS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.VIEW_SELLER_OFFS.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.EDIT_SELLER_OFFS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.EDIT_SELLER_OFFS.getStringMatcher(command);
+                if (matcher.find()) {
+                    String offId = matcher.group(1);
+                    controller.SellerController sellerController = null;
+                    sellerController.editOff(offId);
+                }
+            } else if (ConsoleCommands.ADD_SELLER_OFFS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.ADD_SELLER_OFFS.getStringMatcher(command);
+                if (matcher.find()) {
+                    String offId = matcher.group(1);
+                    model.account.Seller seller = null;
+                    seller.setAllOffers(offId);
+                }
+            } else if (ConsoleCommands.SELLER_BALANCE.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.SELLER_BALANCE.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
                 }
             }
         }
