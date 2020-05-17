@@ -51,6 +51,71 @@ public class CommandProcessor {
                 if (matcher.find()) {
                     String userName = matcher.group(1);
                 }
+            } else if (ConsoleCommands.MANAGER_PROFILE.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.MANAGER_PROFILE.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.MANAGE_PRODUCTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.MANAGE_PRODUCTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.REMOVE_PRODUCTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.REMOVE_PRODUCTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    String products = matcher.group(1);
+                }
+            } else if (ConsoleCommands.CREATE_DISCOUNT_CODE.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.CREATE_DISCOUNT_CODE.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.MANAGER_DISCOUNT_CODE.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.MANAGER_DISCOUNT_CODE.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.VIEW_DISCOUNT_CODE.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.VIEW_DISCOUNT_CODE.getStringMatcher(command);
+                if (matcher.find()) {
+                    String discountCode = matcher.group(1);
+                }
+            } else if (ConsoleCommands.EDIT_DISCOUNT_CODE.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.EDIT_DISCOUNT_CODE.getStringMatcher(command);
+                if (matcher.find()) {
+                    String discountCode = matcher.group(1);
+                }
+            } else if (ConsoleCommands.REMOVE_DISCOUNT_CODE.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.REMOVE_DISCOUNT_CODE.getStringMatcher(command);
+                if (matcher.find()) {
+                    String discountCode = matcher.group(1);
+                }
+            } else if (ConsoleCommands.MANAGE_REQUESTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.MANAGE_REQUESTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    String discountCode = matcher.group(1);
+                }
+            } else if (ConsoleCommands.REQUESTS_DETAILS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.REQUESTS_DETAILS.getStringMatcher(command);
+                if (matcher.find()) {
+                    String request = matcher.group(1);
+                }
+            } else if (ConsoleCommands.ACCEPT_REQUESTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.ACCEPT_REQUESTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    String request = matcher.group(1);
+                }
+            } else if (ConsoleCommands.DECLINE_REQUESTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.DECLINE_REQUESTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    String request = matcher.group(1);
+                }
+            } else if (ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command);
+                if (matcher.find()) {
+                    String discountCode = matcher.group(1);
+                }
             }
         }
     }
