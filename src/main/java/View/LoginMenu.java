@@ -10,7 +10,8 @@ public class LoginMenu extends Menu {
         this.setSubmenus(submenus);
     }
 
-    private void login(String userName){
-        //TODO after get username we must get password.
+    public void login(String userName){
+        controller.EntryController entryController = null;
+        entryController.logIn();
     }
 }
