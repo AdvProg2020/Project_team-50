@@ -1,5 +1,7 @@
 package view;
 
+import model.Off;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -43,8 +45,7 @@ public class CommandProcessor {
             } else if (ConsoleCommands.MANAGING.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.MANAGING.getStringMatcher(command);
                 if (matcher.find()) {
-                    controller.AdminController adminController = null;
-                    adminController.showAllUsers();
+
                 }
             } else if (ConsoleCommands.VIEW_USER.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.VIEW_USER.getStringMatcher(command);
@@ -150,7 +151,7 @@ public class CommandProcessor {
                 if (matcher.find()) {
                     String category = matcher.group(1);
                     controller.AdminController adminController = null;
-                    adminController.addCategory(,category);
+                    adminController.addCategory(, category);
                 }
             } else if (ConsoleCommands.REMOVE_CATEGORIES.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.REMOVE_CATEGORIES.getStringMatcher(command);
@@ -248,7 +249,8 @@ public class CommandProcessor {
             } else if (ConsoleCommands.ADD_SELLER_OFFS.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.ADD_SELLER_OFFS.getStringMatcher(command);
                 if (matcher.find()) {
-                    String offId = matcher.group(1);
+                    ArrayList<String> offId = null;
+                    offId.add(matcher.group(1));
                     model.account.Seller seller = null;
                     seller.setAllOffers(offId);
                 }
