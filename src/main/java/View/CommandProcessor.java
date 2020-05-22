@@ -45,7 +45,6 @@ public class CommandProcessor {
             } else if (ConsoleCommands.MANAGING.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.MANAGING.getStringMatcher(command);
                 if (matcher.find()) {
-
                 }
             } else if (ConsoleCommands.VIEW_USER.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.VIEW_USER.getStringMatcher(command);
