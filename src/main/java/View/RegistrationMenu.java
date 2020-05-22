@@ -11,13 +11,19 @@ public class RegistrationMenu extends Menu{
     public void register(String type, String userName){
         if (type.equalsIgnoreCase("Admin")) {
             controller.RegisterController registerController = null;
-            registerController.registerAdmin();
+            if (registerController.isTherePersonWithUserName(userName)) {
+                registerController.registerAdmin(userName);
+            }
         } else if (type.equalsIgnoreCase("Shopper")) {
             controller.RegisterController registerController = null;
-            registerController.registerShopper();
+            if (registerController.isTherePersonWithUserName(userName)) {
+                registerController.registerShopper(userName);
+            }
         } else if (type.equalsIgnoreCase("Seller")) {
             controller.RegisterController registerController = null;
-            registerController.registerSeller();
+            if (registerController.isTherePersonWithUserName(userName)) {
+                registerController.registerSeller(userName);
+            }
         }
     }
 }
