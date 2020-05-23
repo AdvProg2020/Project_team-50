@@ -258,6 +258,56 @@ public class CommandProcessor {
                 if (matcher.find()) {
                     //TODO
                 }
+            } else if (ConsoleCommands.VIEW_SHOPPER_PERSONAL_INFO.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.VIEW_SHOPPER_PERSONAL_INFO.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.EDIT_SHOPPER_PERSONAL_INFO.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.EDIT_SHOPPER_PERSONAL_INFO.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.VIEW_SHOPPER_CART.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.VIEW_SHOPPER_CART.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.SHOW_SHOPPER_PRODUCTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.SHOW_SHOPPER_PRODUCTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.VIEW_SHOPPER_PRODUCTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.VIEW_SHOPPER_PRODUCTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.INCREASE_SHOPPER_PRODUCTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.INCREASE_SHOPPER_PRODUCTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.DECREASE_SHOPPER_PRODUCTS.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.DECREASE_SHOPPER_PRODUCTS.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.SHOW_SHOPPER_TOTAL_PRICE.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.SHOW_SHOPPER_TOTAL_PRICE.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.PURCHASE_SHOPPER.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.PURCHASE_SHOPPER.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
+            } else if (ConsoleCommands.ENTER_PURCHASE.getStringMatcher(command).matches()) {
+                Matcher matcher = ConsoleCommands.ENTER_PURCHASE.getStringMatcher(command);
+                if (matcher.find()) {
+                    //TODO
+                }
             }
         }
     }
