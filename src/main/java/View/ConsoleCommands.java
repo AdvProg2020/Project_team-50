@@ -23,7 +23,7 @@ public enum ConsoleCommands {
     REMOVE_DISCOUNT_CODE("(?i)remove\\s+discount\\s+code\\s+(\\w+)"),
     MANAGE_REQUESTS("(?i)manage\\s+requests"),
     REQUESTS_DETAILS("(?i)details\\s+(\\w+)"),
-    ACCEPT_REQUESTS("(?i)accept\\s+(\\w+)"),
+    ACCEPT_OR_DECLINE_REQUESTS("(?i)accept\\s+(\\w+)"),
     DECLINE_REQUESTS("(?i)decline\\s+(\\w+)"),
     MANAGE_CATEGORIES("(?i)manage\\s+categories"),
     EDIT_CATEGORIES("(?i)edit\\s+(\\w+)"),
