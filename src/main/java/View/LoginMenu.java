@@ -12,6 +12,8 @@ public class LoginMenu extends Menu {
 
     public void login(String userName){
         controller.EntryController entryController = null;
-        entryController.logIn();
+        if (entryController.isTherePersonWithUserName(userName)) {
+            entryController.logIn(userName);
+        }
     }
 }
