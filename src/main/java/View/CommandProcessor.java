@@ -2,6 +2,7 @@ package view;
 
 import model.Off;
 
+import javax.sound.midi.ControllerEventListener;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -45,65 +46,68 @@ public class CommandProcessor {
             } else if (ConsoleCommands.MANAGING.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.MANAGING.getStringMatcher(command);
                 if (matcher.find()) {
-                }
-            } else if (ConsoleCommands.VIEW_USER.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.VIEW_USER.getStringMatcher(command);
-                if (matcher.find()) {
-                    String userName = matcher.group(1);
-                    //TODO
-                }
-            } else if (ConsoleCommands.DELETE_USER.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.DELETE_USER.getStringMatcher(command);
-                if (matcher.find()) {
-                    String userName = matcher.group(1);
                     controller.AdminController adminController = null;
-                    adminController.deleteUser(userName);
-                }
-            } else if (ConsoleCommands.MANAGER_PROFILE.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.MANAGER_PROFILE.getStringMatcher(command);
-                if (matcher.find()) {
-                    controller.AdminController adminController = null;
-                    adminController.addNewAdmin();
+                    adminController.showAllUsers();
+                     if (ConsoleCommands.VIEW_USER.getStringMatcher(command).matches()) {
+                        Matcher subMatcher = ConsoleCommands.VIEW_USER.getStringMatcher(command);
+                        if (matcher.find()) {
+                            String userName = matcher.group(1);
+                            //TODO
+                        }
+                    } else if (ConsoleCommands.DELETE_USER.getStringMatcher(command).matches()) {
+                         Matcher subMatcher = ConsoleCommands.DELETE_USER.getStringMatcher(command);
+                         if (matcher.find()) {
+                             String userName = matcher.group(1);
+                             adminController.deleteUser(userName);
+                         }
+                     } else if (ConsoleCommands.MANAGER_PROFILE.getStringMatcher(command).matches()) {
+                         Matcher subMatcher = ConsoleCommands.MANAGER_PROFILE.getStringMatcher(command);
+                         if (matcher.find()) {
+                             adminController.addNewAdmin();
+                         }
+                     }
                 }
             } else if (ConsoleCommands.MANAGE_PRODUCTS.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.MANAGE_PRODUCTS.getStringMatcher(command);
                 if (matcher.find()) {
-                    //TODO
-                }
-            } else if (ConsoleCommands.REMOVE_PRODUCTS.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.REMOVE_PRODUCTS.getStringMatcher(command);
-                if (matcher.find()) {
-                    String products = matcher.group(1);
+                     if (ConsoleCommands.REMOVE_PRODUCTS.getStringMatcher(command).matches()) {
+                        Matcher subMatcher = ConsoleCommands.REMOVE_PRODUCTS.getStringMatcher(command);
+                        if (matcher.find()) {
+                            String products = matcher.group(1);
+                            //TODO
+                        }
+                    }
                 }
             } else if (ConsoleCommands.CREATE_DISCOUNT_CODE.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.CREATE_DISCOUNT_CODE.getStringMatcher(command);
                 if (matcher.find()) {
-                    //TODO
+                    controller.AdminController adminController = null;
+                    adminController.addCodedDiscount();
                 }
             } else if (ConsoleCommands.MANAGER_DISCOUNT_CODE.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.MANAGER_DISCOUNT_CODE.getStringMatcher(command);
                 if (matcher.find()) {
                     controller.AdminController adminController = null;
                     adminController.showCodedDiscounts();
-                }
-            } else if (ConsoleCommands.VIEW_DISCOUNT_CODE.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.VIEW_DISCOUNT_CODE.getStringMatcher(command);
-                if (matcher.find()) {
-                    String discountCode = matcher.group(1);
-                }
-            } else if (ConsoleCommands.EDIT_DISCOUNT_CODE.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.EDIT_DISCOUNT_CODE.getStringMatcher(command);
-                if (matcher.find()) {
-                    String discountCodeId = matcher.group(1);
-                    controller.AdminController adminController = null;
-                    adminController.editCodedDiscount(discountCodeId);
-                }
-            } else if (ConsoleCommands.REMOVE_DISCOUNT_CODE.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.REMOVE_DISCOUNT_CODE.getStringMatcher(command);
-                if (matcher.find()) {
-                    String discountCodeId = matcher.group(1);
-                    controller.AdminController adminController = null;
-                    adminController.deleteCodedDiscount(discountCodeId);
+                     if (ConsoleCommands.VIEW_DISCOUNT_CODE.getStringMatcher(command).matches()) {
+                        Matcher subMatcher = ConsoleCommands.VIEW_DISCOUNT_CODE.getStringMatcher(command);
+                        if (matcher.find()) {
+                            String discountCodeId = matcher.group(1);
+                            //TODO
+                        }
+                    } else if (ConsoleCommands.EDIT_DISCOUNT_CODE.getStringMatcher(command).matches()) {
+                         Matcher subMatcher = ConsoleCommands.EDIT_DISCOUNT_CODE.getStringMatcher(command);
+                         if (matcher.find()) {
+                             String discountCodeId = matcher.group(1);
+                             adminController.editCodedDiscount(discountCodeId);
+                         }
+                     } else if (ConsoleCommands.REMOVE_DISCOUNT_CODE.getStringMatcher(command).matches()) {
+                         Matcher subMatcher = ConsoleCommands.REMOVE_DISCOUNT_CODE.getStringMatcher(command);
+                         if (matcher.find()) {
+                             String discountCodeId = matcher.group(1);
+                             adminController.deleteCodedDiscount(discountCodeId);
+                         }
+                     }
                 }
             } else if (ConsoleCommands.MANAGE_REQUESTS.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.MANAGE_REQUESTS.getStringMatcher(command);
