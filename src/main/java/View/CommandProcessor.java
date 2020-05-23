@@ -30,6 +30,7 @@ public class CommandProcessor {
                     LoginMenu loginMenu = null;
                     loginMenu.login(userName);
                 }
+                //----------------------------------------MANAGER----------------------------
             } else if (ConsoleCommands.VIEW_MANAGER_PERSONAL_INFO.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.VIEW_MANAGER_PERSONAL_INFO.getStringMatcher(command);
                 if (matcher.find()) {
@@ -115,54 +116,46 @@ public class CommandProcessor {
                     String discountCode = matcher.group(1);
                     controller.AdminController adminController = null;
                     adminController.showRequestsList();
-                }
-            } else if (ConsoleCommands.REQUESTS_DETAILS.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.REQUESTS_DETAILS.getStringMatcher(command);
-                if (matcher.find()) {
-                    String request = matcher.group(1);
-                    //TODO
-                }
-            } else if (ConsoleCommands.ACCEPT_REQUESTS.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.ACCEPT_REQUESTS.getStringMatcher(command);
-                if (matcher.find()) {
-                    String request = matcher.group(1);
-                    controller.AdminController adminController = null;
-                    adminController.acceptOrDecline(request);
-                }
-            } else if (ConsoleCommands.DECLINE_REQUESTS.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.DECLINE_REQUESTS.getStringMatcher(command);
-                if (matcher.find()) {
-                    String request = matcher.group(1);
-                    controller.AdminController adminController = null;
-                    adminController.acceptOrDecline(request);
+                     if (ConsoleCommands.REQUESTS_DETAILS.getStringMatcher(command).matches()) {
+                        Matcher subMatcher = ConsoleCommands.REQUESTS_DETAILS.getStringMatcher(command);
+                        if (matcher.find()) {
+                            String requestId = matcher.group(1);
+                            //TODO
+                        }
+                    } else if (ConsoleCommands.ACCEPT_OR_DECLINE_REQUESTS.getStringMatcher(command).matches()) {
+                         Matcher subMatcher = ConsoleCommands.ACCEPT_OR_DECLINE_REQUESTS.getStringMatcher(command);
+                         if (matcher.find()) {
+                             String requestId = matcher.group(1);
+                             adminController.acceptOrDecline(requestId);
+                         }
+                     }
                 }
             } else if (ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.MANAGE_CATEGORIES.getStringMatcher(command);
                 if (matcher.find()) {
                     controller.AdminController adminController = null;
                     adminController.showCategories();
+                     if (ConsoleCommands.EDIT_CATEGORIES.getStringMatcher(command).matches()) {
+                        Matcher subMatcher = ConsoleCommands.EDIT_CATEGORIES.getStringMatcher(command);
+                        if (matcher.find()) {
+                            String categoryId = matcher.group(1);
+                            adminController.editCategory(categoryId);
+                        }
+                    } else if (ConsoleCommands.ADD_CATEGORIES.getStringMatcher(command).matches()) {
+                         Matcher subMatcher = ConsoleCommands.ADD_CATEGORIES.getStringMatcher(command);
+                         if (matcher.find()) {
+                             String categoryId = matcher.group(1);
+                             adminController.addCategory(categoryId);
+                         }
+                     } else if (ConsoleCommands.REMOVE_CATEGORIES.getStringMatcher(command).matches()) {
+                         Matcher subMatcher = ConsoleCommands.REMOVE_CATEGORIES.getStringMatcher(command);
+                         if (matcher.find()) {
+                             String categoryId = matcher.group(1);
+                             adminController.deleteCategory(categoryId);
+                         }
+                     }
                 }
-            } else if (ConsoleCommands.EDIT_CATEGORIES.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.EDIT_CATEGORIES.getStringMatcher(command);
-                if (matcher.find()) {
-                    String category = matcher.group(1);
-                    controller.AdminController adminController = null;
-                    adminController.editCategory();
-                }
-            } else if (ConsoleCommands.ADD_CATEGORIES.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.ADD_CATEGORIES.getStringMatcher(command);
-                if (matcher.find()) {
-                    String category = matcher.group(1);
-                    controller.AdminController adminController = null;
-                    adminController.addCategory(, category);
-                }
-            } else if (ConsoleCommands.REMOVE_CATEGORIES.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.REMOVE_CATEGORIES.getStringMatcher(command);
-                if (matcher.find()) {
-                    String category = matcher.group(1);
-                    controller.AdminController adminController = null;
-                    adminController.deleteCategory(category);
-                }
+                //------------------------------------------------SELLER-----------------------------------------------
             } else if (ConsoleCommands.VIEW_SELLER_PERSONAL_INFO.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.VIEW_SELLER_PERSONAL_INFO.getStringMatcher(command);
                 if (matcher.find()) {
