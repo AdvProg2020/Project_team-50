@@ -161,13 +161,13 @@ public class CommandProcessor {
                 if (matcher.find()) {
                     controller.SellerController sellerController = null;
                     sellerController.showPersonalInfo();
-                }
-            } else if (ConsoleCommands.EDIT_SELLER_PERSONAL_INFO.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.EDIT_SELLER_PERSONAL_INFO.getStringMatcher(command);
-                if (matcher.find()) {
-                    String field = matcher.group(1);
-                    controller.SellerController sellerController = null;
-                    sellerController.changePersonalInfo(field);
+                     if (ConsoleCommands.EDIT_SELLER_PERSONAL_INFO.getStringMatcher(command).matches()) {
+                        Matcher subMatcher = ConsoleCommands.EDIT_SELLER_PERSONAL_INFO.getStringMatcher(command);
+                        if (matcher.find()) {
+                            String field = matcher.group(1);
+                            sellerController.changePersonalInfo(field);
+                        }
+                    }
                 }
             } else if (ConsoleCommands.VIEW_COMPANY_INFO.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.VIEW_COMPANY_INFO.getStringMatcher(command);
@@ -185,6 +185,27 @@ public class CommandProcessor {
                 Matcher matcher = ConsoleCommands.MANAGE_SELLER_PRODUCTS.getStringMatcher(command);
                 if (matcher.find()) {
                     //TODO
+                     if (ConsoleCommands.VIEW_SELLER_PRODUCTS.getStringMatcher(command).matches()) {
+                        Matcher subMatcher = ConsoleCommands.VIEW_SELLER_PRODUCTS.getStringMatcher(command);
+                        if (matcher.find()) {
+                            String productId = matcher.group(1);
+                            controller.SellerController sellerController = null;
+                            sellerController.showProducts(productId);
+                        }
+                    } else if (ConsoleCommands.VIEW_BUYERS_SELLER_PRODUCTS.getStringMatcher(command).matches()) {
+                        Matcher subMatcher = ConsoleCommands.VIEW_BUYERS_SELLER_PRODUCTS.getStringMatcher(command);
+                        if (matcher.find()) {
+                            String buyer = matcher.group(1);
+                            //TODO
+                        }
+                    } else if (ConsoleCommands.EDIT_SELLER_PRODUCTS.getStringMatcher(command).matches()) {
+                        Matcher subMatcher = ConsoleCommands.EDIT_SELLER_PRODUCTS.getStringMatcher(command);
+                        if (matcher.find()) {
+                            String productId = matcher.group(1);
+                            controller.SellerController sellerController = null;
+                            sellerController.editProduct(productId);
+                        }
+                    }
                 }
             } else if (ConsoleCommands.VIEW_SELLER_PRODUCTS.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.VIEW_SELLER_PRODUCTS.getStringMatcher(command);
@@ -192,19 +213,6 @@ public class CommandProcessor {
                     String productId = matcher.group(1);
                     controller.SellerController sellerController = null;
                     sellerController.showProducts(productId);
-                }
-            } else if (ConsoleCommands.VIEW_BUYERS_SELLER_PRODUCTS.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.VIEW_BUYERS_SELLER_PRODUCTS.getStringMatcher(command);
-                if (matcher.find()) {
-                    String buyer = matcher.group(1);
-                    //TODO
-                }
-            } else if (ConsoleCommands.EDIT_SELLER_PRODUCTS.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.EDIT_SELLER_PRODUCTS.getStringMatcher(command);
-                if (matcher.find()) {
-                    String productId = matcher.group(1);
-                    controller.SellerController sellerController = null;
-                    sellerController.editProduct(productId);
                 }
             } else if (ConsoleCommands.ADD_SELLER_PRODUCTS.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.ADD_SELLER_PRODUCTS.getStringMatcher(command);
@@ -230,26 +238,26 @@ public class CommandProcessor {
                 if (matcher.find()) {
                     model.account.Seller seller = null;
                     seller.getAllOffers();
-                }
-            } else if (ConsoleCommands.VIEW_SELLER_OFFS.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.VIEW_SELLER_OFFS.getStringMatcher(command);
-                if (matcher.find()) {
-                    //TODO
-                }
-            } else if (ConsoleCommands.EDIT_SELLER_OFFS.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.EDIT_SELLER_OFFS.getStringMatcher(command);
-                if (matcher.find()) {
-                    String offId = matcher.group(1);
-                    controller.SellerController sellerController = null;
-                    sellerController.editOff(offId);
-                }
-            } else if (ConsoleCommands.ADD_SELLER_OFFS.getStringMatcher(command).matches()) {
-                Matcher matcher = ConsoleCommands.ADD_SELLER_OFFS.getStringMatcher(command);
-                if (matcher.find()) {
-                    ArrayList<String> offId = null;
-                    offId.add(matcher.group(1));
-                    model.account.Seller seller = null;
-                    seller.setAllOffers(offId);
+                     if (ConsoleCommands.VIEW_SELLER_OFFS.getStringMatcher(command).matches()) {
+                        Matcher subMatcher = ConsoleCommands.VIEW_SELLER_OFFS.getStringMatcher(command);
+                        if (matcher.find()) {
+                            //TODO
+                        }
+                    } else if (ConsoleCommands.EDIT_SELLER_OFFS.getStringMatcher(command).matches()) {
+                        Matcher subMatcher = ConsoleCommands.EDIT_SELLER_OFFS.getStringMatcher(command);
+                        if (matcher.find()) {
+                            String offId = matcher.group(1);
+                            controller.SellerController sellerController = null;
+                            sellerController.editOff(offId);
+                        }
+                    } else if (ConsoleCommands.ADD_SELLER_OFFS.getStringMatcher(command).matches()) {
+                        Matcher subMatcher = ConsoleCommands.ADD_SELLER_OFFS.getStringMatcher(command);
+                        if (matcher.find()) {
+                            ArrayList<String> offId = null;
+                            offId.add(matcher.group(1));
+                            seller.setAllOffers(offId);
+                        }
+                    }
                 }
             } else if (ConsoleCommands.SELLER_BALANCE.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.SELLER_BALANCE.getStringMatcher(command);
@@ -260,17 +268,21 @@ public class CommandProcessor {
             } else if (ConsoleCommands.VIEW_SHOPPER_PERSONAL_INFO.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.VIEW_SHOPPER_PERSONAL_INFO.getStringMatcher(command);
                 if (matcher.find()) {
-                    //TODO
+                    controller.ShopperController shopperController = null;
+                    shopperController.showPersonalInfo();
                 }
             } else if (ConsoleCommands.EDIT_SHOPPER_PERSONAL_INFO.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.EDIT_SHOPPER_PERSONAL_INFO.getStringMatcher(command);
                 if (matcher.find()) {
-                    //TODO
+                    String field = matcher.group(1);
+                    controller.ShopperController shopperController = null;
+                    shopperController.changePersonalInfo(field);
                 }
             } else if (ConsoleCommands.VIEW_SHOPPER_CART.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.VIEW_SHOPPER_CART.getStringMatcher(command);
                 if (matcher.find()) {
-                    //TODO
+                    controller.ShopperController shopperController = null;
+                    shopperController.showCredit();
                 }
             } else if (ConsoleCommands.SHOW_SHOPPER_PRODUCTS.getStringMatcher(command).matches()) {
                 Matcher matcher = ConsoleCommands.SHOW_SHOPPER_PRODUCTS.getStringMatcher(command);
